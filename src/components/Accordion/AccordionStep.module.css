@@ -1,0 +1,96 @@
+.stepContainer {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.stepContainer.open {
+  border: 2px solid var(--color-success); /* Green border in Figma for the active step container? Actually in figma it shows a green box around the whole step 1. */
+}
+
+/* Looking closely at the Figma, Step 1 is wrapped in a green border box indicating it's active. Let's make it more precise */
+.stepContainer.open {
+  border: 1px solid #10B981; 
+}
+
+.stepHeader {
+  padding: var(--spacing-4) var(--spacing-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stepTitleArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.stepLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.icon {
+  color: var(--color-text-main);
+  display: flex;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.stateIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.selectedCount {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chevron {
+  color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+}
+
+.stepContent {
+  padding: 0 var(--spacing-6) var(--spacing-6);
+}
+
+.nextButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-6);
+}
+
+.nextButton {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--spacing-2) var(--spacing-6);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  background: white;
+  transition: all 0.2s;
+}
+
+.nextButton:hover {
+  background: var(--color-primary-light);
+}

@@ -1,0 +1,47 @@
+.appContainer {
+  min-height: 100vh;
+  padding: var(--spacing-8);
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-8);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.builderColumn {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-sm);
+}
+
+.reviewColumn {
+  position: sticky;
+  top: var(--spacing-8);
+}

@@ -13,7 +13,7 @@
         { "id": "grey", "name": "Grey", "colorHex": "#CCCCCC" },
         { "id": "black", "name": "Black", "colorHex": "#000000" }
       ],
-      "image": "https://placehold.co/200x200/FFFFFF/513BDE?text=Cam+v4",
+      "image": "/assets/product-1.webp",
       "learnMoreUrl": "#"
     },
     {
@@ -28,7 +28,7 @@
         { "id": "white", "name": "White", "colorHex": "#FFFFFF" },
         { "id": "black", "name": "Black", "colorHex": "#000000" }
       ],
-      "image": "https://placehold.co/200x200/FFFFFF/513BDE?text=Cam+Pan+v3",
+      "image": "/assets/product-2.webp",
       "learnMoreUrl": "#"
     },
     {
@@ -43,7 +43,7 @@
         { "id": "white", "name": "White", "colorHex": "#FFFFFF" },
         { "id": "black", "name": "Black", "colorHex": "#000000" }
       ],
-      "image": "https://placehold.co/200x200/FFFFFF/513BDE?text=Floodlight+v2",
+      "image": "/assets/product-3.webp",
       "learnMoreUrl": "#"
     },
     {
@@ -55,7 +55,7 @@
       "compareAtPrice": null,
       "badge": null,
       "variants": [],
-      "image": "https://placehold.co/200x200/FFFFFF/513BDE?text=Duo+Cam",
+      "image": "/assets/product-4.webp",
       "learnMoreUrl": "#"
     },
     {
@@ -70,7 +70,7 @@
         { "id": "white", "name": "White", "colorHex": "#FFFFFF" },
         { "id": "black", "name": "Black", "colorHex": "#000000" }
       ],
-      "image": "https://placehold.co/200x200/FFFFFF/513BDE?text=Battery+Cam+Pro",
+      "image": "/assets/product-5.webp",
       "learnMoreUrl": "#"
     },
     {

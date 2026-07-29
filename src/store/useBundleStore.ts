@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { Product } from '../types';
 
 export interface CartItem {
   productId: string;
@@ -8,10 +9,12 @@ export interface CartItem {
 
 interface BundleState {
   cart: CartItem[];
+  products: Product[];
   activeStep: number;
   setQuantity: (productId: string, variantId: string | null, quantity: number) => void;
   setActiveStep: (step: number) => void;
   saveForLater: () => void;
+  fetchProducts: () => Promise<void>;
 }
 
 const getInitialState = () => {
@@ -25,12 +28,8 @@ const getInitialState = () => {
     }
   }
   return {
-    cart: [
-      { productId: 'sense-motion-sensor', variantId: null, quantity: 2 },
-      { productId: 'sense-hub', variantId: null, quantity: 1 },
-      { productId: 'microsd-card-256', variantId: null, quantity: 2 },
-      { productId: 'cam-unlimited', variantId: null, quantity: 1 },
-    ],
+    cart: [],
+    products: [],
     activeStep: 1,
   };
 };
@@ -57,6 +56,15 @@ export const useBundleStore = create<BundleState>((set, get) => ({
       return { cart: newCart };
     }),
   setActiveStep: (step) => set({ activeStep: step }),
+  fetchProducts: async () => {
+    try {
+      const response = await fetch('http://localhost:3000/products');
+      const data = await response.json();
+      set({ products: data });
+    } catch (error) {
+      console.error('Failed to fetch products', error);
+    }
+  },
   saveForLater: () => {
     const { cart, activeStep } = get();
     localStorage.setItem('bundle_builder_state', JSON.stringify({ cart, activeStep }));

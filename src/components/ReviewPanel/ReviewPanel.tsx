@@ -1,12 +1,10 @@
 import styles from './ReviewPanel.module.css';
 import { useBundleStore } from '../../store/useBundleStore';
-import productsData from '../../data/products.json';
-import { Product, Variant } from '../../types/index';
+import { Variant } from '../../types/index';
 import { Minus, Plus, Truck } from 'lucide-react';
 
 export default function ReviewPanel() {
-  const { cart, setQuantity, saveForLater } = useBundleStore();
-  const products = productsData as Product[];
+  const { cart, products, setQuantity, saveForLater } = useBundleStore();
 
   const handleIncrement = (productId: string, variantId: string | null, currentQuantity: number) => {
     setQuantity(productId, variantId, currentQuantity + 1);

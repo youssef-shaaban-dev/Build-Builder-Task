@@ -3,8 +3,6 @@ import { Camera, Shield, Wifi, Grid } from 'lucide-react';
 import AccordionStep from '../Accordion/AccordionStep';
 import ProductCard from '../ProductCard/ProductCard';
 import { useBundleStore } from '../../store/useBundleStore';
-import productsData from '../../data/products.json';
-import { Product } from '../../types/index';
 
 const stepsConfig = [
   { id: 'cameras', title: 'Choose your cameras', icon: <Camera size={20} /> },
@@ -14,8 +12,7 @@ const stepsConfig = [
 ];
 
 export default function Builder() {
-  const { cart, activeStep, setActiveStep } = useBundleStore();
-  const products: Product[] = productsData as Product[];
+  const { cart, products, activeStep, setActiveStep } = useBundleStore();
 
   const handleToggle = (stepIndex: number) => {
     setActiveStep(activeStep === stepIndex ? 0 : stepIndex);

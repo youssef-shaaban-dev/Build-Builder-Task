@@ -1,8 +1,16 @@
+import { useEffect } from 'react';
 import Builder from './components/Builder/Builder';
 import ReviewPanel from './components/ReviewPanel/ReviewPanel';
+import { useBundleStore } from './store/useBundleStore';
 import styles from './App.module.css';
 
 function App() {
+  const fetchProducts = useBundleStore(state => state.fetchProducts);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
+
   return (
     <div className={styles.appContainer}>
       <div className={styles.content}>

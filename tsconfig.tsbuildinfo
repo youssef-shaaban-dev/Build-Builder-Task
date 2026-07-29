@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/accordion/accordionstep.tsx","./src/components/builder/builder.tsx","./src/components/productcard/productcard.tsx","./src/components/reviewpanel/reviewpanel.tsx","./src/store/usebundlestore.ts","./src/types/index.ts"],"version":"5.9.3"}

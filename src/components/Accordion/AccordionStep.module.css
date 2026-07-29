@@ -1,15 +1,15 @@
 .stepContainer {
   border-bottom: 1px solid var(--color-border);
   background: var(--color-bg-card);
+  transition: all 0.2s ease;
 }
 
 .stepContainer.open {
-  border: 2px solid var(--color-success); /* Green border in Figma for the active step container? Actually in figma it shows a green box around the whole step 1. */
-}
-
-/* Looking closely at the Figma, Step 1 is wrapped in a green border box indicating it's active. Let's make it more precise */
-.stepContainer.open {
-  border: 1px solid #10B981; 
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-bg-panel);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-2) 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .stepHeader {

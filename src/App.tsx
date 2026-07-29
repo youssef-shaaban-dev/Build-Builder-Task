@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={styles.appContainer}>
       <div className={styles.content}>
-        <div className={styles.header}>
+        <div className={styles.mobileHeader}>
           <h1>Let's get started!</h1>
         </div>
         <main className={styles.mainGrid}>

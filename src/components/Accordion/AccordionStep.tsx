@@ -26,20 +26,19 @@ export default function AccordionStep({
   children
 }: AccordionStepProps) {
   return (
-    <div className={`${styles.stepContainer} ${isOpen ? styles.open : ''}`}>
-      <div className={styles.stepHeader} onClick={onToggle}>
-        <div className={styles.stepTitleArea}>
-          <span className={styles.stepLabel}>STEP {stepIndex} OF {totalSteps}</span>
+    <div className={styles.accordionWrapper}>
+      <span className={styles.stepLabel}>STEP {stepIndex} OF {totalSteps}</span>
+      <div className={`${styles.stepContainer} ${isOpen ? styles.open : ''}`}>
+        <div className={styles.stepHeader} onClick={onToggle}>
           <div className={styles.titleRow}>
             <span className={styles.icon}>{icon}</span>
             <h2 className={styles.title}>{title}</h2>
           </div>
+          <div className={styles.stateIndicator}>
+            {selectedCount > 0 && <span className={styles.selectedCount}>{selectedCount} selected</span>}
+            {isOpen ? <ChevronUp className={styles.chevron} /> : <ChevronDown className={styles.chevron} />}
+          </div>
         </div>
-        <div className={styles.stateIndicator}>
-          {selectedCount > 0 && <span className={styles.selectedCount}>{selectedCount} selected</span>}
-          {isOpen ? <ChevronUp className={styles.chevron} /> : <ChevronDown className={styles.chevron} />}
-        </div>
-      </div>
       
       {isOpen && (
         <div className={styles.stepContent}>
@@ -53,6 +52,7 @@ export default function AccordionStep({
           )}
         </div>
       )}
+      </div>
     </div>
   );
 }

@@ -5,11 +5,7 @@
 }
 
 .stepContainer.open {
-  border: 1px solid var(--color-primary);
-  background-color: var(--color-bg-panel);
-  border-radius: var(--radius-md);
-  margin: var(--spacing-2) 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-bottom: var(--spacing-2);
 }
 
 .stepHeader {
@@ -28,11 +24,14 @@
 }
 
 .stepLabel {
+  display: block;
   font-size: 10px;
   text-transform: uppercase;
   color: var(--color-text-muted);
   letter-spacing: 0.5px;
   font-weight: 600;
+  margin-bottom: var(--spacing-2);
+  padding-left: var(--spacing-6);
 }
 
 .titleRow {
